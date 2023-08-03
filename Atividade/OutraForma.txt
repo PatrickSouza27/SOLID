@@ -1,0 +1,82 @@
+public class TaxaService
+{
+    private ITaxas _taxa;
+
+    public TaxaService(ITaxas taxa)
+    {
+        _taxa = taxa;
+    }
+
+    public string Service(ValorTaxa valor)
+    {
+        if (valor.Valor < 0)
+            return "Valor Inválido";
+
+        double taxaCalculada = _taxa.CalcularTaxa(valor);
+        return $"R$ {taxaCalculada:F2}";
+    }
+}
+
+public class FixedTaxa : ITaxas
+{
+    public double CalcularTaxa(ValorTaxa taxa)
+    {
+        return 10.0; // Exemplo de taxa fixa
+    }
+}
+
+public class PercentageTaxa : ITaxas
+{
+    private readonly double _percentage;
+
+    public PercentageTaxa(double percentage)
+    {
+        _percentage = percentage;
+    }
+
+    public double CalcularTaxa(ValorTaxa taxa)
+    {
+        return taxa.Valor * _percentage / 100;
+    }
+}
+
+public class ValorTaxa
+{
+    public double Valor { get; set; }
+
+    public ValorTaxa() { }
+
+    public ValorTaxa(double valor) => Valor = valor;
+
+    public override string ToString() => $"R$ {Valor:F2}";
+}
+
+public interface ITaxas
+{
+    double CalcularTaxa(ValorTaxa taxa);
+}
+
+[ApiController]
+public class TaxaController : ControllerBase
+{
+    private readonly TaxaService _brasilTaxaService;
+    private readonly TaxaService _euaTaxaService;
+
+    public TaxaController()
+    {
+        _brasilTaxaService = new TaxaService(new PercentageTaxa(60));
+        _euaTaxaService = new TaxaService(new PercentageTaxa(30));
+    }
+
+    [HttpGet("Brasil/{valor:double}")]
+    public IActionResult TaxaBrasil(double valor)
+    {
+        return Ok(_brasilTaxaService.Service(new ValorTaxa(valor)));
+    }
+
+    [HttpGet("EUA/{valor:double}")]
+    public IActionResult TaxaEUA(double valor)
+    {
+        return Ok(_euaTaxaService.Service(new ValorTaxa(valor)));
+    }
+}
