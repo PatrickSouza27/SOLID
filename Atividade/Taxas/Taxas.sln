@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxas", "Taxas\Taxas.csproj", "{EEBAAB8B-C4D4-4D67-B97D-C74132F57AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaControllerCLI", "TaxaControllerCLI\TaxaControllerCLI.csproj", "{B4F6F587-CD33-41B6-91ED-51F6251E0FAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEBAAB8B-C4D4-4D67-B97D-C74132F57AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBAAB8B-C4D4-4D67-B97D-C74132F57AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBAAB8B-C4D4-4D67-B97D-C74132F57AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBAAB8B-C4D4-4D67-B97D-C74132F57AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F6F587-CD33-41B6-91ED-51F6251E0FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F6F587-CD33-41B6-91ED-51F6251E0FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F6F587-CD33-41B6-91ED-51F6251E0FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F6F587-CD33-41B6-91ED-51F6251E0FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AAB8455-7DC6-4FCC-AC4E-FFB0266477EB}
+	EndGlobalSection
+EndGlobal
