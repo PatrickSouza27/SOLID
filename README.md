@@ -6,5 +6,21 @@
 * Princípio do Aberto/Fechado
 * Segregação de Interfaces e Liskov
 
+SOLID -> é um acrônimo dos cinco primeiros principíos da programação orientada a objetos e design de código
+identificados por Robert C. Martin (ou Uncle Bob) por volta do ano 2000
+
+Os Princípios de SOLID devem ser aplicados para se obter os benefícios da orientação a objetos, tais como:
+1 - Seja facil de se manter, Adaptar e se ajustar às alterações de escopo
+2 - Seja testável e de fácil entendimento (se seu codigo n é testavel, é q ele n está bom / um bom codigo é facil de entender)
+3 - seja extensivel para alterações com o menor esforço necessario
+4 - que permaneça o máximo de tempo possivel em utilização
+
+Utilizando os Princípios de SOLID é possivel evitar problemas muito comuns:
+1 - Dificuldade na testabilidade / criação de testes de unidade
+2 - codigo macarrônico, sem estrutura ou padrão
+3 - Dificuldade de isolar funcionalidades
+4 - Duplicação de código, uma alteração precisa ser feita em N pontos
+5 - Fragilidade, o codigo quebra facilmente em vários pontos após alguma mudança
+
 
 ![Captura de tela 2023-12-10 192531](https://github.com/PatrickSouza27/SOLID/assets/77933748/f062fc11-c568-4288-aa31-413f2f84a75f)
